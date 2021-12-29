@@ -47,7 +47,17 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.search)
             ),
           PopupMenuButton(
-            onSelected: (value)=>{value == 1 ? Get.toNamed('/about') : launch('https://github.com/b14cknc0d3/note') },//()=>{launch('https://github.com/b14cknc0d3/note')},
+            onSelected: (value)=>{
+              value == 1 ? 
+              showAboutDialog(
+                context: context,
+                applicationName: 'Note App',
+                applicationVersion: '1.0',
+                children: [
+                  Text('This app is developed by using GetX statement.'),
+                  Text('For presist data storage, sqflite package is used.')
+                ]) : 
+              launch('https://github.com/KyawMinnHtut/mynote') },//()=>{launch('https://github.com/b14cknc0d3/note')},
             itemBuilder: (BuildContext context)=>[
               const PopupMenuItem(
                 value: 1,

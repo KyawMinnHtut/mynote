@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:mynote/controller/binding.dart';
-import 'package:mynote/views/about_app.dart';
+//import 'package:mynote/views/about_app.dart';
 import 'package:mynote/views/add_note.dart';
 import 'package:mynote/views/drawer/deleted_note.dart';
 import 'package:mynote/views/drawer/favourite_note.dart';
@@ -16,7 +16,7 @@ class MyRoutes {
     GetPage(name: '/edit', page: ()=>NoteEdit(), binding: NoteBinding()),
     GetPage(name: "/fav", page: ()=>FavScreen(), binding: NoteBinding()),
     GetPage(name: '/del', page: ()=>DelScreen(), binding: NoteBinding()),
-    GetPage(name: '/about', page: ()=>AboutApp()),
+    //GetPage(name: '/about', page: ()=>AboutApp()),
 
   ];
 }
